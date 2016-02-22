@@ -1,6 +1,19 @@
 # Reservation in Cinema [January 2014]
  Project about booking seats in cinema. Application was created during studying on last year. I update my project in a few places near the middle of 2015.
 
+## Technologies:
+1. Frontend:
+  - jQuery ver. 1.11.2
+  - Ajax
+  - LESS(CSS3)
+  - HTML5
+2. Backend:
+  - Express(node.js) ver. 4.12.3
+  - SOCKET.IO ver. 1.3.5
+  - passport ver. 0.2.1
+3. Database:
+  - mongoose(MongoDB) ver. 4.0.2
+
 ## Roles and functionalities:
 |                                | User  | Admin |
 |:------------------------------:|:-----:|:-----:|
@@ -23,15 +36,13 @@
 7. Open browser with address `localhost:3000` to see application. <br />
 To login on admin account please use `admin`for username and `password` for password.
 
-## Technologies:
-1. Frontend:
-  - jQuery ver. 1.11.2
-  - Ajax
-  - LESS(CSS3)
-  - HTML5
-2. Backend:
-  - Express(node.js) ver. 4.12.3
-  - SOCKET.IO ver. 1.3.5
-  - passport ver. 0.2.1
-3. Database:
-  - mongoose(MongoDB) ver. 4.0.2
+## Screens from both roles
+
+1) Admin:
+![alt text][admin_png]
+
+2) User:
+![alt text][user_png]
+
+[admin_png]: https://raw.githubusercontent.com/palprz/reservation-in-cinema/master/markdown_img_admin.png "Logo Title Text 1"
+[user_png]: https://github.com/palprz/reservation-in-cinema/blob/master/markdown_img_user.png "Logo Title Text 2"
