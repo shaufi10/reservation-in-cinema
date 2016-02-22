@@ -1,0 +1,24 @@
+
+<% if (user != 'none') { %>
+    <select id="movie" name="movieSelection">
+        <option selected disabled style="display:none;">
+            Choose movie
+        </option>
+    </select>
+<% } else { %>
+<select id="dummyMovie" name="movieSelection">
+    <option selected disabled style="display:none;">
+        Choose movie
+    </option>
+</select>
+<% } %>
+<select id="day" name="daySelection">
+    <option selected disabled style="display:none;">
+        Choose day
+    </option>
+</select>
+<select id="hour" name="hourSelection">
+    <option selected disabled style="display:none;">
+        Choose hour
+    </option>
+</select>

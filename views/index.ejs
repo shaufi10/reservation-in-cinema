@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+        <script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="/javascripts/script.js"></script>
+        <script src="/javascripts/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="informationSeatBox"></div>
+        <div id="mainContent">
+            <%= include defaultparts/header.ejs %> 
+            <main>
+                <% if (user != 'none') { %>
+                <div id="hello">Hello <span id="nameofuser" style="color: #FFF"><%= user.username %></span>!</div>
+                <% } else { %>
+                    <% if (action == 'none') { %>
+                        <div id="hello">Please login first to book seats</div>
+                    <% } %>
+                <% } %>
+    
+                <div id="action">                    
+                    <% if (action == 'login') { %>
+                        <%= include indexparts/login.ejs %>
+                    
+                    <% } if (action == 'signup') { %>
+                        <%= include indexparts/signup.ejs %>
+                    
+                    <% } if (action == 'showuser') { %>
+                        <div style="color: #FFF; font-size: 22px;">User data:</div>
+                        <% for(var i=0; i<returnList.length; i++) { %>
+                                <div>
+                                    <%= returnList[i].username %> 
+                                    <%= returnList[i].password %> 
+                                    <%= returnList[i].name %> 
+                                    <%= returnList[i].surname %> 
+                                    <%= returnList[i].email %> 
+                                    <%= returnList[i].phone %>
+                                </div>
+                        <% } %>
+                
+                    <% } if (action == 'deleteuser') { %>
+                        <%= include userparts/deleteuser.ejs %>
+                    
+                    <% } if (action == 'edituser') { %>
+                        <%= include userparts/edituser.ejs %>
+                    
+                    <% } %>
+                
+                    
+                    <% if (action == 'showmovie') { %>
+                        <div style="color: #FFF; font-size: 22px;">Movie data:</div>
+                        <% for(var i=0; i<returnList.length; i++) { %>
+                                <div>
+                                    <%= returnList[i].name %> 
+                                    <%= returnList[i].hall %> 
+                                    <%= returnList[i].day %> 
+                                    <%= returnList[i].hour %>
+                                </div>
+                        <% } %>                
+                    <% } if (action == 'addmovie') { %>
+                        <%= include adminparts/addmovie.ejs %>
+                
+                    <% } if (action == 'deletemovie') {%>
+                        <%= include adminparts/deletemovie.ejs %>
+                
+                    <% } if (action == 'editmovie') { %>
+                        <%= include adminparts/editmovie.ejs %>
+                
+                    <% } %>    
+                
+                
+                    <% if (action == 'shownews') { %>
+                        <div style="color: #FFF; font-size: 22px;">News data:</div>
+                        <% for(var i=0; i<returnList.length; i++) { %>
+                                <div>
+                                    <%= returnList[i].title %> 
+                                    <%= returnList[i].content %> 
+                                    <%= returnList[i].sellout %>
+                                </div>
+                        <% } %>
+                
+                    <% } if (action == 'addnews') { %>
+                        <%= include adminparts/addnews.ejs %>
+                
+                    <% } if (action == 'deletenews') {%>
+                        <%= include adminparts/deletenews.ejs %>
+                
+                    <% } if (action == 'editnews') { %>
+                        <%= include adminparts/editnews.ejs %>
+                
+                    <% } %>   
+                </div>
+                <% if (action == 'none') { %>
+                <div id="selection">
+                    <%= include indexparts/selection.ejs %>                    
+                </div>
+                <div id="ticket">
+                    <%= include indexparts/ticket.ejs%>
+                </div>
+                <div id="newsBox">
+                    <%= include indexparts/news.ejs %>  
+                </div>
+                <div id="hall"></div>
+                <div id="detail">
+                    <%= include indexparts/detail.ejs %>                    
+                </div>
+                <div id="summation">Summary</div>
+                <div id="summationList"></div>
+                <div id="finishReservation">Book!</div>
+                <% } %>
+            </main>
+            <%= include defaultparts/footer.ejs %> 
+        </div>
+    </body>
+</html>

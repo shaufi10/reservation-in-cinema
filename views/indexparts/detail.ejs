@@ -1,0 +1,11 @@
+<% if (user == 'none') { %>
+    <input id="name" placeholder="Choose name"/>
+    <input id="surname" placeholder="Choose surname"/>
+    <input id="email" placeholder="Choose mail"/>
+    <input id="phone" placeholder="Choose phone number"/>
+<% } else { %>
+    <input id="name" value='<%= user.name %>'/>
+    <input id="surname" value='<%= user.surname %>'/>
+    <input id="email" value='<%= user.email %>'/>
+    <input id="phone" value='<%= user.phone %>'/>
+<% } %>

@@ -1,0 +1,21 @@
+<footer>
+    <div>
+        <% if (user != "none") { %>
+            <a href="/edituser">Edit account</a> -
+        <% } %>
+        <% if (user.isAdmin == true) { %>
+            <a href="/deleteuser">Delete user</a> -
+            <a href="/showuser">Show users</a><br/>
+
+            <a href="/addmovie">Add movie</a> -
+            <a href="/deletemovie">Delete movie</a> -
+            <a href="/editmovie">Edit movie</a> -
+            <a href="/showmovie">Show movie</a><br/>
+
+            <a href="/addnews">Add news</a> -
+            <a href="/deletenews">Delete news</a> -
+            <a href="/editnews">Edit news</a><br/>
+        <% } %>
+        <a href="/">HOMEPAGE</a>
+    </div>
+</footer>

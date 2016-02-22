@@ -1,0 +1,11 @@
+<form name="edituser" action="/edituserCRUD" method="post">
+    Name: <span style="color: #FFF"><%= user.name == '' ? 'no chosen' : user.name %></span>
+    Surname: <span style="color: #FFF"><%= user.surname == '' ? 'no chosen' : user.surname %></span>
+    Email: <span style="color: #FFF"><%= user.email == '' ? 'no chosen' : user.email %></span>
+    Phone: <span style="color: #FFF"><%= user.phone == '' ? 'no chosen' : user.phone %></span><br/>
+    <input type="text" name="nameNew" placeholder='New name'>
+    <input type="text" name="surnameNew" placeholder='New surname'>
+    <input type="text" name="emailNew" placeholder='New email'>
+    <input type="text" name="phoneNew" placeholder='New phone number'>
+    <input type="submit" value="Edit account">
+</form>

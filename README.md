@@ -13,11 +13,15 @@
 | Add/edit/remove newses         |       |X      |
 
 ## Steps for start the application:
-1. Go to the directory with application
-2. `npm install`
-3. Set path of mongoDB (e.g. `mongod --dbpath C:\your_direction_to_project\reservation-in-cinema\data`)
-4. `npm start`
-5. Open browser with address `localhost:3000` to see application
+1. Go to the directory with application.
+2. Install all dependencies: `npm install`
+3. Set path of mongoDB (e.g. `mongod --dbpath C:\your_direction_to_project\reservation-in-cinema\data`).
+4. Create database on mongoDB: `use reservation`.
+5. Create admin account with using command: <br />
+`db.usermodels.insert( { isAdmin: true, email: "", phone: "", surname: "Smith", name: "John", password: "sha1$10eb0e25$1$bde8a0b29628ee8833c2600f30015f101711a1e5", username: "admin" } )`
+6. Start Express server: `npm start`
+7. Open browser with address `localhost:3000` to see application. <br />
+To login on admin account please use `admin`for username and `password` for password.
 
 ## Technologies:
 1. Frontend:

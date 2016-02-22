@@ -1,0 +1,10 @@
+<header>
+    <b style="font-size: 22px; margin-left: 20px; color: #FFF"><%= title %></b>
+    <div class="loginButton wylogin">Logout</div>
+    <% if (user == 'none') { %>
+        <a href="/login"><div class="loginButton login">Login</div></a>
+        <a href="/signup"><div class="loginButton">Register</div></a>
+    <% } else { %>
+        <a href="/logout"><div class="loginButton login">Logout</div></a>
+    <% } %>
+</header>

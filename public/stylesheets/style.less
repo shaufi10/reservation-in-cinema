@@ -1,0 +1,267 @@
+@defaultMainColor: #000;
+@defaultFirstColor: #FFF;
+@defaultSecondColor: #30D5C8;
+
+@correctColor: green;
+@incorrectColor: red;
+
+/* GENERAL */
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: @defaultMainColor;
+    color: @defaultSecondColor;
+}
+
+#mainContent{
+    width: 60em;
+	margin: 0px auto;
+    overflow: auto; 
+    background-color: @defaultMainColor + #111; 
+}
+
+/* HEADER */
+header{
+    width: 60em;
+    height: 2em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: #888;
+    div{
+        float: right;
+        width: 8em;
+        height: 2.5em;
+        margin-right: 2em;
+        background-color: @defaultMainColor + #888;
+        color: @defaultFirstColor;
+        text-align: center;
+        line-height: 3em;
+        font-weight: bold;
+        border-bottom: 0.3em solid @defaultSecondColor;
+        border-left: 0.2em solid @defaultSecondColor;
+        border-right: 0.2em solid @defaultSecondColor;
+        border-radius: 0em 0em 2em 2em;
+        &:hover{
+            background-color: @defaultSecondColor;
+            color: @defaultMainColor;
+            border-color: @defaultSecondColor;
+            cursor: pointer;
+        }
+    }
+}
+
+/* MAIN */
+main{
+    clear: both;
+    width: 60em;
+	margin: 0px auto;
+    #hello{
+        margin-left: 1em;
+    }
+    #action{
+        form{
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li{
+                    width: 15em;
+                }
+            }
+            width: 50em;
+            margin: 0 auto;
+            overflow: auto;
+            padding: 1em 0em;
+            input{
+                color: @defaultSecondColor;
+                background-color: @defaultMainColor + #333;   
+            }
+            #dayList{
+                li{
+                    float: left;
+                    width: 7em;
+                }
+            }
+            #hourList{
+                clear: both;
+                li{
+                    float: left;
+                    width: 5em;
+                }
+            }
+        }
+    }
+    #selection{
+        clear: both;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40em;
+        margin: 0 auto;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        padding: 0em;
+        overflow: auto;
+        select{
+            width: 12em;
+            height: 2em;
+            line-height: 2em;
+            color: @defaultMainColor + #333;
+            background-color: @defaultMainColor;
+        }
+        #movie{
+            color: @defaultSecondColor;
+            background-color: @defaultMainColor + #333;            
+        }
+        #dummyMovie{
+            color: @defaultMainColor + #333;
+            background-color: @defaultMainColor;            
+        }
+    }
+    #ticket{
+        width: 30em;
+        margin: 0 auto;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        div {
+            float: left;
+            input{
+                width: 3em;
+                color: @defaultSecondColor;
+                background-color: @defaultMainColor + #333;  
+            }
+            &:last-child{
+                font-weight: bold;
+            }
+        }
+        #money{
+            color: @defaultFirstColor;
+        }
+    }
+    #newsBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 58em;
+        margin: 0 auto;
+        overflow: auto;
+        .news{
+            width: 18em;
+            height: 11em;
+            background-color: #555;
+            margin-bottom: 1em;
+            .title{
+                width: 16em;
+                margin: 0 auto;
+                margin-top: 0.5em;
+                height: 2em;
+                color: @defaultSecondColor;
+            }
+            .content{
+                width: 16em;
+                margin: 0 auto;
+                height: 7em;
+                color: @defaultFirstColor;
+            }
+        }
+    }
+    
+    #hall{
+        width: 50em;
+        margin: 0 auto;
+        overflow: auto;
+        .screen{
+            float: left;
+            width: 50em;
+            height: 2em;
+            margin-bottom: 0.5em;
+            text-align: center;
+            color: @defaultMainColor;
+            background-color: @defaultSecondColor;
+            border-radius: 3em 3em 0em 0em;
+            line-height: 2em;
+        }
+        .row{
+            clear: both;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0.5em 0em;
+            div{
+                float: left;
+                width: 3em;
+                height: 3em;
+                margin: 0em 0.2em;
+                line-height: 3em;
+                background-color: @defaultMainColor + #555;
+                color: @defaultSecondColor;
+                text-align: center;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    #summation, #finishReservation{
+        width: 8em;
+        height: 2em;
+        margin: 0 auto;
+        overflow: auto;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        line-height: 2em;
+        text-align: center;
+        color: @defaultMainColor + #333;
+        background-color: @defaultMainColor;
+        border: 0.15em solid @defaultMainColor + #333; 
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    #detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50em;
+        margin: 0 auto;
+        overflow: auto; 
+        margin-top: 1em;
+        margin-bottom: 1em;
+        input{
+            color: @defaultFirstColor;
+            background-color: @defaultMainColor + #333;  
+        }
+    }
+}
+
+#informationSeatBox{
+    position: absolute;
+    width: 15em;
+    height: 9em;
+    color: @defaultMainColor;
+}
+
+/* FOOTER */
+footer{
+    clear: both;
+    width: 60em;
+    bottom: 0;
+    right: 0;
+    border-radius: 1em;
+    background-color: #888;
+    text-align: center;
+    a{
+        color: #FFF;
+        text-decoration: none;
+        &:hover{
+            color: @defaultSecondColor;
+        }
+    }
+}
